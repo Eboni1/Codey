@@ -2,34 +2,125 @@
 <html>
 <head>
     <title>Joshua - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/13aded781b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Joshua Escano</h1>
-        <p>Student &amp; Developer</p>
-    </header>
-    <nav class="topbar">
-        <ul>
-            <li><a href="#" class="active">Work</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav>
-    <div class="c1">
-        <div class="card">
-            <div class="card2">
-                <div class="text">
-                    <h3>Bea's Treats</h3>
-                    <p>Text here.</p>
-                    <a href="shop.html">View Project</a>
-                </div>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/yest.PNG" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Aboutme">About Me</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student & Developer</p>
+                <h1>Hi, I'm <span>Joshua</span><br>Escaño from BUP</h1>
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2023 Joshua</p>
-    </footer>
+    <!-- -------------about----------- -- -->
+    <section id="Aboutme">
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/laster.jpg" class="aboutimg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet. Id unde architecto ea asperiores voluptatem 
+                        cum tempore reiciendis. Aut molestiae consectetur aut Quis voluptate et consequatur 
+                        in blanditiis repudiandae qui tempore numquam et voluptatibus impedit et modi omnis. 
+                        Est internos numquam eum dolor saepe eos veritatis quae. Et ipsam nulla eos earum 
+                        enim est nihil dolorem aut dignissimos enim.<br><br></p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills" data-aos="fade-up">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                                <li><span>Web Development</span><br>Web Development</li>
+                                <li><span>Program Development</span><br>Building simple Programs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience" data-aos="fade-up">
+                            <ul>
+                                <li><span>2022 - 2023 present</span><br>Programming & Developing Classes at BUP</li>
+                                <li><span>2021 - 2022</span><br>C++ Classes at BUP</li>
+                                <li><span>2019 - 2020</span><br>Learned HTML and Logic Gates at home</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education" data-aos="fade-up">
+                            <ul>
+                                <li><span>2023</span><br>HTML & CSS Crash Courses on Youtube</li>
+                                <li><span>2021</span><br>C++ Crash Courses on Youtube</li>
+                                <li><span>2019</span><br>Logic Gates on Turing Complete</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------services----------- -- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-regular fa-folder"></i>
+                    <h2>Ladies Joish</h2>
+                    <p>Lorem ipsum dolor sit amet. Sit quae labore et necessitatibus voluptatem ab fugiat consequatur. Non quibusdam galisum et incidunt expedita quo consequatur officia sed velit deleniti. </p>
+                    <a href="shop.html">Learn more</a>
+                </div>
+                <!-- <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet. Sit quae labore et necessitatibus voluptatem ab fugiat consequatur. Non quibusdam galisum et incidunt expedita quo consequatur officia sed velit deleniti. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h2>Program Development</h2>
+                    <p>Lorem ipsum dolor sit amet. Sit quae labore et necessitatibus voluptatem ab fugiat consequatur. Non quibusdam galisum et incidunt expedita quo consequatur officia sed velit deleniti. </p>
+                    <a href="#">Learn more</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- -------------portfolio----------- -- -->
+    <div id="portfolio">
+        <div class="container">
+            
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
